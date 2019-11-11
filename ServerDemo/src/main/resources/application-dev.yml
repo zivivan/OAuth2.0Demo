@@ -1,0 +1,47 @@
+server:
+  port: 7000
+  servlet:
+    session.timeout: 300
+
+logging:
+  level:
+    org.springframework.web: DEBUG
+
+
+spring:
+  #Druid
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/rbac_db?autoReconnect=true&useUnicode=true&characterEncoding=utf-8&failOverReadOnly=false&useSSL=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+  #Thymeleaf
+  thymeleaf:
+    mode: LEGACYHTML5
+    prefix: classpath:/templates/
+    suffix: .html
+    template-resolver-order: 0
+    cache: false
+
+  #redis
+  redis:
+      cluster:
+#        nodes: namenode22:6379,datanode23:6379,datanode24:6379
+        nodes: 192.168.1.81:6380,192.168.1.81:6381,192.168.1.81:6382,192.168.1.81:6383,192.168.1.81:6384,192.168.1.81:6385
+        #nodes: 39.105.17.149:6380,39.105.17.149:6381,39.105.17.149:6382,39.105.17.149:6383,39.105.17.149:6384,39.105.17.149:6385
+        #nodes: 172.17.69.108:6380,172.17.69.108:6381,172.17.69.108:6382,172.17.69.108:6383,172.17.69.108:6384,172.17.69.108:6385
+        max-redirects: 6
+      timeout: 300000
+      jedis:
+        pool:
+          max-active: 8
+          max-wait: 100000
+          max-idle: 8
+          min-idle: 0
+
+#mybatis
+mybatis:
+  type-aliases-package: cn.zifangsky.mapper
+  mapper-locations: classpath:cn/zifangsky/mapper/xml/*.xml
