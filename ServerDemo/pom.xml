@@ -27,7 +27,7 @@
 		<!-- MyBatis -->
 		<mybatis-spring-boot-starter>1.3.2</mybatis-spring-boot-starter>
 		<!-- JUnit单元测试 -->
-		<junit>4.12</junit>
+		<junit>4.13.1</junit>
 		<!-- Apache Commons系列公共库 -->
 		<commons-lang3>3.7</commons-lang3>
 		<commons-io>2.6</commons-io>
