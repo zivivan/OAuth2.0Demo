@@ -35,7 +35,7 @@
 		<!-- Java Servlet API -->
 		<javax.servlet-api>4.0.1</javax.servlet-api>
 		<!-- Apache HttpClient -->
-		<httpclient>4.5.5</httpclient>
+		<httpclient>4.5.13</httpclient>
 		<!-- Fastjson -->
 		<fastjson>1.2.47</fastjson>
 		<!-- Druid -->
